@@ -1,0 +1,485 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{91BDCB4D-E418-485F-A2CC-480694AE3D7C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Employee</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\FETCH_HEAD" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\new" />
+    <None Include=".git\logs\refs\remotes\origin\master" />
+    <None Include=".git\logs\refs\remotes\origin\new" />
+    <None Include=".git\objects\02\2f361fa6ae3f1d220f863233a32f3588115bab" />
+    <None Include=".git\objects\05\033349d52c6b433e29a1d8fab730d2146c84d8" />
+    <None Include=".git\objects\09\32c42c4b0d531afbc52092c93ac5b49ff55d61" />
+    <None Include=".git\objects\09\e4e43fcc43dffb0db501be735df8b030c2570a" />
+    <None Include=".git\objects\0f\29faf8f04fc40ee88eb71b98b2671756f88ea2" />
+    <None Include=".git\objects\0f\4327e7f1fb1aea19027c2228120e104aaa56d9" />
+    <None Include=".git\objects\16\ac988919181cbb7dbdb9c0117f71ea8e427f48" />
+    <None Include=".git\objects\1a\9b521d04a1b0e33c9a907147bb49dcf3be66cd" />
+    <None Include=".git\objects\1c\7501aa6878260d9f26523a3fcc0e9129b4e59e" />
+    <None Include=".git\objects\1f\f0c423042b46cb1d617b81efb715defbe8054d" />
+    <None Include=".git\objects\27\72b70455ad4f00bd18b1f8d9776bd5503e9eb3" />
+    <None Include=".git\objects\28\a4d5fcc327efda9352a8a0995eb323d7010c41" />
+    <None Include=".git\objects\2b\c349ce1d7d2a92cb98ebc639f1f124e9279a12" />
+    <None Include=".git\objects\2c\c3e4852a5a42e6aadd6284e067b66e14a57bc7" />
+    <None Include=".git\objects\2d\e62418c07c3ffa833543f484445dbfd0fe68d8" />
+    <None Include=".git\objects\2e\0a49ad1c305bf83fb60b34f754a301b38e8d14" />
+    <None Include=".git\objects\32\6be3bec548b9bfb187cdaf42fbdcf8734635d2" />
+    <None Include=".git\objects\32\e1dd94708a74710f90b7c30bce93342fe457f9" />
+    <None Include=".git\objects\37\8d773d18054960feb2467a97c5541b7c65ecd2" />
+    <None Include=".git\objects\3c\4efe206bd0e7230ad0ae8396a3c883c8207906" />
+    <None Include=".git\objects\3e\fb64822d351f7eff43e05a60699583c8093f67" />
+    <None Include=".git\objects\3f\5563522da4855c3959f7953278c9bd44e6c331" />
+    <None Include=".git\objects\4b\2d9e8440b9c3ed0fbccac1a3afaa7b3372fde8" />
+    <None Include=".git\objects\4c\9a28a2128cbf6ba972215736d75210359c60e4" />
+    <None Include=".git\objects\4d\c4920bb828e8bfb5f7efc8f4c074af9e2784ab" />
+    <None Include=".git\objects\4f\1ca361fa08657b2094b8718b5b54d2c7de452f" />
+    <None Include=".git\objects\50\09fd9cd6ae42ec03786f2d9184911224773292" />
+    <None Include=".git\objects\51\a7f290c7f6e31aeaba9eefff68a42d3cc0cebb" />
+    <None Include=".git\objects\51\aa758be2e7711b065030a454c2685cca2b1ccf" />
+    <None Include=".git\objects\53\662e352d23927d43fcd9458e9ca3d0ef1c32e7" />
+    <None Include=".git\objects\54\81eb2e5659e4dc71aa682311048472fc6af349" />
+    <None Include=".git\objects\5a\a9982eda4133db3e31965fc0b504c114d053e3" />
+    <None Include=".git\objects\5f\ee0685496c143a002985cdfb832dfd3001e6fc" />
+    <None Include=".git\objects\63\dfdb874938060e681f733e692b3fcc99ec449e" />
+    <None Include=".git\objects\6d\6e68281ddecfe6611fbb2c9f79306e69359cab" />
+    <None Include=".git\objects\6e\a5d8f6ce41bb2fe2196e468046f22e741c175e" />
+    <None Include=".git\objects\70\5e7748db61c7321b0dee15ccddd6431e29073a" />
+    <None Include=".git\objects\85\7a63ed3a85148df9c54e36da00735c2b1c19cb" />
+    <None Include=".git\objects\87\7e659e94f7a9c31761795a85d79fe060958ea5" />
+    <None Include=".git\objects\87\eaa434234e2a984c261e0450a2f4ad837aa7b4" />
+    <None Include=".git\objects\8d\12b501386524e4c757101610174391d63e5c90" />
+    <None Include=".git\objects\8d\141d0fc4fbdae4c42f109f90ee4e3f83844be4" />
+    <None Include=".git\objects\91\e6d7b40d401c9ad742d0b9969f7a9beb79799c" />
+    <None Include=".git\objects\95\83d0ff91e7f5b4f164b74ff22013efae1863c2" />
+    <None Include=".git\objects\95\beccc8770563a9978ec809e003c72c33c35413" />
+    <None Include=".git\objects\99\f59cd474a804793358c3748a254dd2a88f00db" />
+    <None Include=".git\objects\9b\c0a4c69e592a1a367e80ccc02a89604a2ee8b8" />
+    <None Include=".git\objects\9c\96832ae2b2d1c65433f5595394378688322799" />
+    <None Include=".git\objects\a3\a799985c43bc7309d701b2cad129023377dc71" />
+    <None Include=".git\objects\a6\8dcf70aacada5253c9fb6a7ec9dbef27db1e46" />
+    <None Include=".git\objects\a8\4813706b256b35d6cf77a362774cc373b8d592" />
+    <None Include=".git\objects\aa\07330337c5552f7dc647fcc8325e2ada88a27a" />
+    <None Include=".git\objects\bb\21066666f1c6b30f096831e98bdb537334f483" />
+    <None Include=".git\objects\bd\3a02a40842141e6037eaf47279edd9860f3bbb" />
+    <None Include=".git\objects\be\784dc1d5bcb92ab155f578f3723524a3dd9688" />
+    <None Include=".git\objects\c3\3e562cf72c093e97a6b35bd7617d1997800b38" />
+    <None Include=".git\objects\c4\cf5c8163c506250ccb64481144d9d5f2383ee6" />
+    <None Include=".git\objects\c5\222e420b04c05370c52df2bc523cab97b9b33a" />
+    <None Include=".git\objects\cb\fe1f390f429de1155aa9fd73bb426670912d46" />
+    <None Include=".git\objects\d0\a9bc9737e6ab84fed5ca1979b11faac4e139dd" />
+    <None Include=".git\objects\d3\e121b8602e2bfbed5d2b1fa960d09b8e7bf153" />
+    <None Include=".git\objects\d4\f7ef823391639072d0c1c2500a63b10d989cfe" />
+    <None Include=".git\objects\d7\712aaf178326511b84c9be85967b18cc17241b" />
+    <None Include=".git\objects\df\89a5030f2192f2efc2eef1e625b588903b735e" />
+    <None Include=".git\objects\df\eaf38ec800f3fe6b974ffbe8ab9240cc69b438" />
+    <None Include=".git\objects\eb\b80c275deea9037cfff5e5be65b7ecfe057c78" />
+    <None Include=".git\objects\ec\8183cfbfac7140668799e90e1729f2cde5fe81" />
+    <None Include=".git\objects\f1\d83254a61cd188d6e8a08ad2156cb36174f22a" />
+    <None Include=".git\objects\f3\5c22a935a5392ec97fd548c84a6319a4399fce" />
+    <None Include=".git\objects\fd\9125705c4e5cd4d88ecf2d9377f6dc4a238823" />
+    <None Include=".git\ORIG_HEAD" />
+    <None Include=".git\refs\heads\new" />
+    <None Include=".git\refs\remotes\origin\master" />
+    <None Include=".git\refs\remotes\origin\new" />
+    <None Include=".vs\config\applicationhost.config" />
+    <None Include=".vs\employeeinformation\v15\.suo" />
+    <None Include=".vs\employeeinformation\v15\Server\sqlite3\db.lock" />
+    <None Include=".vs\employeeinformation\v15\Server\sqlite3\storage.ide" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="EmpDetails\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="EmpDetails\obj\Debug\EmpDetails.csprojResolveAssemblyReference.cache" />
+    <None Include="EmpDetails\obj\Release\EmpDetails.csproj.CoreCompileInputs.cache" />
+    <None Include="EmpDetails\packages.config" />
+    <None Include="Employeeinformation\ApplicationInsights.config" />
+    <None Include="Employeeinformation\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Employeeinformation\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Employeeinformation\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Employeeinformation\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Employeeinformation\obj\Debug\Employeeinformation.csproj.CoreCompileInputs.cache" />
+    <None Include="Employeeinformation\obj\Debug\Employeeinformation.csprojResolveAssemblyReference.cache" />
+    <None Include="Employeeinformation\obj\Release\Employeeinformation.csproj.CoreCompileInputs.cache" />
+    <None Include="Employeeinformation\packages.config" />
+    <None Include="Employeeinformation\Scripts\jquery-1.10.2.min.map" />
+    <None Include="Employeeinformation\Views\Employee\Create.cshtml" />
+    <None Include="Employeeinformation\Views\Employee\Index.cshtml" />
+    <None Include="Employeeinformation\Views\Home\About.cshtml" />
+    <None Include="Employeeinformation\Views\Home\Contact.cshtml" />
+    <None Include="Employeeinformation\Views\Home\Index.cshtml" />
+    <None Include="Employeeinformation\Views\Shared\Error.cshtml" />
+    <None Include="Employeeinformation\Views\Shared\_Layout.cshtml" />
+    <None Include="Employeeinformation\Views\Web.config" />
+    <None Include="Employeeinformation\Views\_ViewStart.cshtml" />
+    <None Include="Employeeinformation\Web.config" />
+    <None Include="Employeeinformation\Web.Debug.config" />
+    <None Include="Employeeinformation\Web.Release.config" />
+    <None Include="packages\Antlr.3.4.1.9004\Antlr.3.4.1.9004.nupkg" />
+    <None Include="packages\bootstrap.3.0.0\bootstrap.3.0.0.nupkg" />
+    <None Include="packages\bootstrap.3.0.0\content\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="packages\bootstrap.3.0.0\content\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="packages\bootstrap.3.0.0\content\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="packages\jQuery.1.10.2\Content\Scripts\jquery-1.10.2.min.map" />
+    <None Include="packages\jQuery.1.10.2\jQuery.1.10.2.nupkg" />
+    <None Include="packages\jQuery.1.10.2\Tools\common.ps1" />
+    <None Include="packages\jQuery.1.10.2\Tools\install.ps1" />
+    <None Include="packages\jQuery.1.10.2\Tools\uninstall.ps1" />
+    <None Include="packages\jQuery.Validation.1.11.1\jQuery.Validation.1.11.1.nupkg" />
+    <None Include="packages\Microsoft.ApplicationInsights.2.2.0\Microsoft.ApplicationInsights.2.2.0.nupkg" />
+    <None Include="packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6.nupkg" />
+    <None Include="packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\content\ApplicationInsights.config.install.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\content\ApplicationInsights.config.transform" />
+    <None Include="packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\content\ApplicationInsights.config.uninstall.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\Microsoft.ApplicationInsights.DependencyCollector.2.2.0.nupkg" />
+    <None Include="packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\content\ApplicationInsights.config.install.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\content\ApplicationInsights.config.transform" />
+    <None Include="packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\content\ApplicationInsights.config.uninstall.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0.nupkg" />
+    <None Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\content\net40\ApplicationInsights.config.install.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\content\net40\ApplicationInsights.config.transform" />
+    <None Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\content\net40\ApplicationInsights.config.uninstall.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\content\net40\web.config.install.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\content\net40\web.config.uninstall.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\content\net45\ApplicationInsights.config.install.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\content\net45\ApplicationInsights.config.transform" />
+    <None Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\content\net45\ApplicationInsights.config.uninstall.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\content\net45\web.config.install.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\content\net45\web.config.uninstall.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\Microsoft.ApplicationInsights.Web.2.2.0.nupkg" />
+    <None Include="packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\content\ApplicationInsights.config.install.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\content\ApplicationInsights.config.transform" />
+    <None Include="packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\content\ApplicationInsights.config.uninstall.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\Microsoft.ApplicationInsights.WindowsServer.2.2.0.nupkg" />
+    <None Include="packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\Tools\install.ps1" />
+    <None Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\content\ApplicationInsights.config.install.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\content\ApplicationInsights.config.transform" />
+    <None Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\content\ApplicationInsights.config.uninstall.xdt" />
+    <None Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0.nupkg" />
+    <None Include="packages\Microsoft.AspNet.Mvc.5.2.3\Content\Web.config.install.xdt" />
+    <None Include="packages\Microsoft.AspNet.Mvc.5.2.3\Content\Web.config.uninstall.xdt" />
+    <None Include="packages\Microsoft.AspNet.Mvc.5.2.3\Microsoft.AspNet.Mvc.5.2.3.nupkg" />
+    <None Include="packages\Microsoft.AspNet.Razor.3.2.3\Microsoft.AspNet.Razor.3.2.3.nupkg" />
+    <None Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\Microsoft.AspNet.Web.Optimization.1.1.3.nupkg" />
+    <None Include="packages\Microsoft.AspNet.WebPages.3.2.3\Content\Web.config.install.xdt" />
+    <None Include="packages\Microsoft.AspNet.WebPages.3.2.3\Content\Web.config.uninstall.xdt" />
+    <None Include="packages\Microsoft.AspNet.WebPages.3.2.3\Microsoft.AspNet.WebPages.3.2.3.nupkg" />
+    <None Include="packages\Microsoft.Azure.KeyVault.Core.1.0.0\Microsoft.Azure.KeyVault.Core.1.0.0.nupkg" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\content\net45\web.config.install.xdt" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\content\net45\web.config.uninstall.xdt" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\content\net46\web.config.install.xdt" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\content\net46\web.config.uninstall.xdt" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8.nupkg" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\tools\net45\install.ps1" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\tools\net45\uninstall.ps1" />
+    <None Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.2.3\Microsoft.jQuery.Unobtrusive.Validation.3.2.3.nupkg" />
+    <None Include="packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" />
+    <None Include="packages\Microsoft.Net.Compilers.2.4.0\Microsoft.Net.Compilers.2.4.0.nupkg" />
+    <None Include="packages\Microsoft.Net.Compilers.2.4.0\ThirdPartyNotices.rtf" />
+    <None Include="packages\Microsoft.Net.Compilers.2.4.0\tools\csc.exe.config" />
+    <None Include="packages\Microsoft.Net.Compilers.2.4.0\tools\csc.rsp" />
+    <None Include="packages\Microsoft.Net.Compilers.2.4.0\tools\csi.exe.config" />
+    <None Include="packages\Microsoft.Net.Compilers.2.4.0\tools\csi.rsp" />
+    <None Include="packages\Microsoft.Net.Compilers.2.4.0\tools\Microsoft.CSharp.Core.targets" />
+    <None Include="packages\Microsoft.Net.Compilers.2.4.0\tools\Microsoft.VisualBasic.Core.targets" />
+    <None Include="packages\Microsoft.Net.Compilers.2.4.0\tools\vbc.exe.config" />
+    <None Include="packages\Microsoft.Net.Compilers.2.4.0\tools\vbc.rsp" />
+    <None Include="packages\Microsoft.Net.Compilers.2.4.0\tools\VBCSCompiler.exe.config" />
+    <None Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\Microsoft.Web.Infrastructure.1.0.0.0.nupkg" />
+    <None Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\tools\Install.ps1" />
+    <None Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\tools\Uninstall.ps1" />
+    <None Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\tools\VS.psd1" />
+    <None Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\tools\VS.psm1" />
+    <None Include="packages\Modernizr.2.6.2\Modernizr.2.6.2.nupkg" />
+    <None Include="packages\Modernizr.2.6.2\Tools\common.ps1" />
+    <None Include="packages\Modernizr.2.6.2\Tools\install.ps1" />
+    <None Include="packages\Modernizr.2.6.2\Tools\uninstall.ps1" />
+    <None Include="packages\Newtonsoft.Json.10.0.2\LICENSE.md" />
+    <None Include="packages\Newtonsoft.Json.10.0.2\Newtonsoft.Json.10.0.2.nupkg" />
+    <None Include="packages\Newtonsoft.Json.10.0.2\tools\install.ps1" />
+    <None Include="packages\Respond.1.2.0\Respond.1.2.0.nupkg" />
+    <None Include="packages\WebGrease.1.5.2\WebGrease.1.5.2.nupkg" />
+    <None Include="packages\WindowsAzure.Storage.9.1.0\WindowsAzure.Storage.9.1.0.nupkg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".git\ms-persist.xml" />
+    <Content Include="EmpDetails\EmpDetails.csproj" />
+    <Content Include="Employeeinformation\bin\Antlr3.Runtime.dll" />
+    <Content Include="Employeeinformation\bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="Employeeinformation\bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="Employeeinformation\bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="Employeeinformation\bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="Employeeinformation\bin\Microsoft.AI.Web.dll" />
+    <Content Include="Employeeinformation\bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="Employeeinformation\bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="Employeeinformation\bin\Microsoft.Azure.KeyVault.Core.dll" />
+    <Content Include="Employeeinformation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="Employeeinformation\bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="Employeeinformation\bin\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="Employeeinformation\bin\Newtonsoft.Json.dll" />
+    <Content Include="Employeeinformation\bin\System.Web.Helpers.dll" />
+    <Content Include="Employeeinformation\bin\System.Web.Mvc.dll" />
+    <Content Include="Employeeinformation\bin\System.Web.Optimization.dll" />
+    <Content Include="Employeeinformation\bin\System.Web.Razor.dll" />
+    <Content Include="Employeeinformation\bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="Employeeinformation\bin\System.Web.WebPages.dll" />
+    <Content Include="Employeeinformation\bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="Employeeinformation\bin\WebGrease.dll" />
+    <Content Include="Employeeinformation\Content\bootstrap.css" />
+    <Content Include="Employeeinformation\Content\bootstrap.min.css" />
+    <Content Include="Employeeinformation\Content\Site.css" />
+    <Content Include="Employeeinformation\Employeeinformation.csproj" />
+    <Content Include="Employeeinformation\Employeeinformation.csproj.user" />
+    <Content Include="Employeeinformation\favicon.ico" />
+    <Content Include="Employeeinformation\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Employeeinformation\Global.asax" />
+    <Content Include="Employeeinformation\Scripts\bootstrap.js" />
+    <Content Include="Employeeinformation\Scripts\bootstrap.min.js" />
+    <Content Include="Employeeinformation\Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Employeeinformation\Scripts\jquery-1.10.2.js" />
+    <Content Include="Employeeinformation\Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Employeeinformation\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Employeeinformation\Scripts\jquery.validate.js" />
+    <Content Include="Employeeinformation\Scripts\jquery.validate.min.js" />
+    <Content Include="Employeeinformation\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Employeeinformation\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Employeeinformation\Scripts\modernizr-2.6.2.js" />
+    <Content Include="Employeeinformation\Scripts\respond.js" />
+    <Content Include="Employeeinformation\Scripts\respond.min.js" />
+    <Content Include="packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll" />
+    <Content Include="packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.pdb" />
+    <Content Include="packages\bootstrap.3.0.0\content\Content\bootstrap.css" />
+    <Content Include="packages\bootstrap.3.0.0\content\Content\bootstrap.min.css" />
+    <Content Include="packages\bootstrap.3.0.0\content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="packages\bootstrap.3.0.0\content\Scripts\bootstrap.js" />
+    <Content Include="packages\bootstrap.3.0.0\content\Scripts\bootstrap.min.js" />
+    <Content Include="packages\jQuery.1.10.2\Content\Scripts\jquery-1.10.2-vsdoc.js" />
+    <Content Include="packages\jQuery.1.10.2\Content\Scripts\jquery-1.10.2.js" />
+    <Content Include="packages\jQuery.1.10.2\Content\Scripts\jquery-1.10.2.min.js" />
+    <Content Include="packages\jQuery.1.10.2\Tools\jquery-1.10.2.intellisense.js" />
+    <Content Include="packages\jQuery.Validation.1.11.1\Content\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="packages\jQuery.Validation.1.11.1\Content\Scripts\jquery.validate.js" />
+    <Content Include="packages\jQuery.Validation.1.11.1\Content\Scripts\jquery.validate.min.js" />
+    <Content Include="packages\Microsoft.ApplicationInsights.2.2.0\lib\net40\Microsoft.ApplicationInsights.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.2.2.0\lib\net40\Microsoft.ApplicationInsights.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.2.2.0\lib\net46\Microsoft.ApplicationInsights.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.2.2.0\lib\net46\Microsoft.ApplicationInsights.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.2.2.0\lib\netstandard1.5\Microsoft.ApplicationInsights.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.2.2.0\lib\netstandard1.5\Microsoft.ApplicationInsights.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.2.2.0\lib\portable-win81%252Bwpa81\Microsoft.ApplicationInsights.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.2.2.0\lib\uap10.0\Microsoft.ApplicationInsights.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.2.2.0\lib\wp8\Microsoft.ApplicationInsights.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net40\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net40\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net40\Microsoft.AI.DependencyCollector.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net40\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net40\Microsoft.AI.Web.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net40\Microsoft.AI.Web.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net40\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net40\Microsoft.AI.WindowsServer.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net40\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net40\Microsoft.AI.ServerTelemetryChannel.XML" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.XML" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.xml" />
+    <Content Include="packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll" />
+    <Content Include="packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.xml" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\system.web.optimization.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.xml" />
+    <Content Include="packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll" />
+    <Content Include="packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.xml" />
+    <Content Include="packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\portable-net45+wp8+wpa81+win\Microsoft.Azure.KeyVault.Core.dll" />
+    <Content Include="packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\portable-net45+wp8+wpa81+win\Microsoft.Azure.KeyVault.Core.xml" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.2.3\Content\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.2.3\Content\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\csc.exe" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\csi.exe" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\Microsoft.Win32.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Console.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Diagnostics.Process.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.IO.Compression.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.IO.FileSystem.DriveInfo.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.IO.Pipes.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Security.AccessControl.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Security.Claims.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Security.Principal.Windows.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Text.Encoding.CodePages.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Threading.Thread.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.ValueTuple.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Xml.ReaderWriter.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Xml.XmlDocument.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Xml.XPath.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\System.Xml.XPath.XDocument.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\vbc.exe" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.4.0\tools\VBCSCompiler.exe" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="packages\Modernizr.2.6.2\Content\Scripts\modernizr-2.6.2.js" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\netstandard1.0\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\netstandard1.0\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\netstandard1.3\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\netstandard1.3\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\portable-net40+sl5+win8+wpa81+wp8\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\portable-net40+sl5+win8+wpa81+wp8\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\portable-net45+win8+wpa81+wp8\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\portable-net45+win8+wpa81+wp8\Newtonsoft.Json.xml" />
+    <Content Include="packages\Respond.1.2.0\content\Scripts\respond.js" />
+    <Content Include="packages\Respond.1.2.0\content\Scripts\respond.min.js" />
+    <Content Include="packages\WebGrease.1.5.2\lib\WebGrease.dll" />
+    <Content Include="packages\WebGrease.1.5.2\tools\WG.exe" />
+    <Content Include="packages\WindowsAzure.Storage.9.1.0\lib\net45\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="packages\WindowsAzure.Storage.9.1.0\lib\net45\Microsoft.WindowsAzure.Storage.pdb" />
+    <Content Include="packages\WindowsAzure.Storage.9.1.0\lib\net45\Microsoft.WindowsAzure.Storage.xml" />
+    <Content Include="packages\WindowsAzure.Storage.9.1.0\lib\netstandard1.0\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="packages\WindowsAzure.Storage.9.1.0\lib\netstandard1.0\Microsoft.WindowsAzure.Storage.pdb" />
+    <Content Include="packages\WindowsAzure.Storage.9.1.0\lib\netstandard1.3\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="packages\WindowsAzure.Storage.9.1.0\lib\netstandard1.3\Microsoft.WindowsAzure.Storage.pdb" />
+    <Content Include="packages\WindowsAzure.Storage.9.1.0\lib\win8\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="packages\WindowsAzure.Storage.9.1.0\lib\win8\Microsoft.WindowsAzure.Storage.pdb" />
+    <Content Include="packages\WindowsAzure.Storage.9.1.0\lib\wp8\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="packages\WindowsAzure.Storage.9.1.0\lib\wp8\Microsoft.WindowsAzure.Storage.pdb" />
+    <Content Include="packages\WindowsAzure.Storage.9.1.0\lib\wpa\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="packages\WindowsAzure.Storage.9.1.0\lib\wpa\Microsoft.WindowsAzure.Storage.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EmpDetails\EmpDetails.cs" />
+    <Compile Include="EmpDetails\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="EmpDetails\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="EmpDetails\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="EmpDetails\Properties\AssemblyInfo.cs" />
+    <Compile Include="Employeeinformation\App_Start\BundleConfig.cs" />
+    <Compile Include="Employeeinformation\App_Start\FilterConfig.cs" />
+    <Compile Include="Employeeinformation\App_Start\RouteConfig.cs" />
+    <Compile Include="Employeeinformation\Controllers\EmployeeController.cs" />
+    <Compile Include="Employeeinformation\Controllers\HomeController.cs" />
+    <Compile Include="Employeeinformation\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Employeeinformation\Models\EmpBlobOperations.cs" />
+    <Compile Include="Employeeinformation\Models\EmpTableOperations.cs" />
+    <Compile Include="Employeeinformation\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Employeeinformation\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Employeeinformation\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Employeeinformation\Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\objects\pack\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include="EmpDetails\bin\Debug\" />
+    <Folder Include="EmpDetails\bin\Release\" />
+    <Folder Include="EmpDetails\obj\Debug\TempPE\" />
+    <Folder Include="Employeeinformation\App_Data\" />
+    <Folder Include="Employeeinformation\bin\roslyn\" />
+    <Folder Include="Employeeinformation\obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
